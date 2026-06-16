@@ -1,0 +1,885 @@
+
+<!DOCTYPE html>
+<!-- saved from url=(0062)file:///Users/andrea/Downloads/linea_tiempo_reinsercion_6.html -->
+<html lang="es"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Del castigo al cuidado ; Línea de tiempo · Antisexismo Lab</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;600;700&family=Lora:ital,wght@0,400;0,600;1,400&display=swap');
+
+  :root {
+    --ink: #1a1a1a;
+    --paper: #f7f5f0;
+    --accent: #2d5a3d;
+    --accent-light: #e8f0ea;
+    --warn: #8b3a1e;
+    --warn-light: #f5ebe6;
+    --mid: #4a4a4a;
+    --rule: #c8c0b0;
+    --gold: #b8960c;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'Space Grotesk', sans-serif;
+    background: var(--paper);
+    color: var(--ink);
+    min-height: 100vh;
+  }
+
+  a { color: inherit; }
+  a:hover { opacity: 0.75; }
+
+  header {
+    background: var(--ink);
+    color: var(--paper);
+    padding: 48px 40px 40px;
+  }
+
+  .eyebrow {
+    font-size: 11px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--rule);
+    margin-bottom: 14px;
+  }
+
+  header h1 {
+    font-family: 'Lora', serif;
+    font-size: clamp(26px, 4vw, 42px);
+    font-weight: 600;
+    line-height: 1.2;
+    max-width: 700px;
+  }
+
+  header h1 em {
+    font-style: italic;
+    color: #a8c8b2;
+  }
+
+  header p {
+    margin-top: 16px;
+    font-size: 14px;
+    color: #aaa;
+    max-width: 600px;
+    line-height: 1.6;
+  }
+
+  .paradigm-bar {
+    display: flex;
+    max-width: 960px;
+    margin: 36px auto 0;
+    padding: 0 40px;
+    gap: 0;
+  }
+
+  .paradigm-pill {
+    flex: 1;
+    padding: 14px 20px;
+    font-size: 12px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    font-weight: 600;
+    text-align: center;
+  }
+
+  .p-punitivo { background: var(--warn); color: #fff; }
+  .p-transicion { background: var(--gold); color: #fff; }
+  .p-cuidado { background: var(--accent); color: #fff; }
+
+  .container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 40px;
+  }
+
+  .timeline {
+    position: relative;
+    margin-top: 56px;
+  }
+
+  .timeline::before {
+    content: '';
+    position: absolute;
+    left: 160px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: var(--rule);
+  }
+
+  .era-label {
+    font-size: 10px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    font-weight: 700;
+    padding: 28px 0 10px 180px;
+    color: var(--mid);
+    border-bottom: 1px solid var(--rule);
+    margin-bottom: 0;
+  }
+
+  .era-label.era-punitivo { color: var(--warn); border-color: var(--warn); }
+  .era-label.era-transicion { color: var(--gold); border-color: var(--gold); }
+  .era-label.era-cuidado { color: var(--accent); border-color: var(--accent); }
+
+  .event {
+    display: flex;
+    gap: 0;
+    align-items: flex-start;
+    position: relative;
+    padding: 24px 0 24px 0;
+    border-bottom: 1px dashed #ddd8ce;
+  }
+
+  .event:last-child { border-bottom: none; }
+
+  .event-date {
+    width: 140px;
+    min-width: 140px;
+    text-align: right;
+    padding-right: 28px;
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--mid);
+    padding-top: 2px;
+    line-height: 1.3;
+  }
+
+  .event-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: 2px solid currentColor;
+    background: var(--paper);
+    flex-shrink: 0;
+    margin-top: 4px;
+    z-index: 1;
+    position: relative;
+    margin-left: -5px;
+  }
+
+  .dot-punitivo { color: var(--warn); }
+  .dot-transicion { color: var(--gold); }
+  .dot-cuidado { color: var(--accent); }
+  .dot-internacional { color: #555; }
+
+  .event-content {
+    padding-left: 24px;
+    flex: 1;
+  }
+
+  .event-tag {
+    display: inline-block;
+    font-size: 9.5px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    font-weight: 700;
+    padding: 2px 8px;
+    border-radius: 2px;
+    margin-bottom: 6px;
+  }
+
+  .tag-punitivo { background: var(--warn-light); color: var(--warn); }
+  .tag-transicion { background: #fdf7e2; color: var(--gold); }
+  .tag-cuidado { background: var(--accent-light); color: var(--accent); }
+  .tag-internacional { background: #eee; color: #555; }
+  .tag-chile { background: #e8edf5; color: #2a4a7a; }
+
+  .event-title {
+    font-family: 'Lora', serif;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.35;
+    margin-bottom: 6px;
+  }
+
+  .event-title a {
+    text-decoration: none;
+    border-bottom: 1px solid var(--rule);
+    transition: border-color 0.15s;
+  }
+  .event-title a:hover { border-color: var(--accent); }
+
+  .event-body {
+    font-size: 13.5px;
+    line-height: 1.65;
+    color: var(--mid);
+  }
+
+  .event-body strong { color: var(--ink); font-weight: 600; }
+
+  .source-link {
+    display: inline-block;
+    margin-top: 8px;
+    font-size: 11.5px;
+    color: var(--accent);
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.15s;
+  }
+  .source-link::before { content: '↗ '; font-size: 10px; }
+  .source-link:hover { border-color: var(--accent); }
+
+  .key-concept {
+    display: inline-block;
+    background: var(--accent-light);
+    border-left: 3px solid var(--accent);
+    padding: 10px 14px;
+    margin-top: 10px;
+    font-size: 13px;
+    line-height: 1.5;
+    font-style: italic;
+    font-family: 'Lora', serif;
+    color: #1a1a1a;
+    max-width: 520px;
+    border-radius: 0 3px 3px 0;
+  }
+
+  .key-concept.warn { background: var(--warn-light); border-color: var(--warn); }
+
+  /* Sources section */
+  .sources-section {
+    margin-top: 64px;
+    padding-top: 32px;
+    border-top: 2px solid var(--ink);
+  }
+
+  .sources-section h2 {
+    font-family: 'Lora', serif;
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 24px;
+  }
+
+  .sources-group {
+    margin-bottom: 28px;
+  }
+
+  .sources-group h3 {
+    font-size: 10px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: var(--mid);
+    margin-bottom: 12px;
+    padding-bottom: 6px;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .sources-group ul {
+    list-style: none;
+    font-size: 13px;
+    line-height: 1.7;
+    color: var(--mid);
+  }
+
+  .sources-group ul li {
+    padding-left: 16px;
+    position: relative;
+    margin-bottom: 6px;
+  }
+
+  .sources-group ul li::before {
+    content: ';';
+    position: absolute;
+    left: 0;
+    color: var(--rule);
+  }
+
+  .sources-group ul li a {
+    color: var(--accent);
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+  }
+  .sources-group ul li a:hover { border-color: var(--accent); }
+
+  /* CC footer */
+  .cc-footer {
+    margin-top: 48px;
+    padding: 24px;
+    background: var(--accent-light);
+    border-radius: 4px;
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .cc-badge {
+    font-size: 22px;
+    flex-shrink: 0;
+    line-height: 1;
+    margin-top: 2px;
+  }
+
+  .cc-text {
+    font-size: 12.5px;
+    line-height: 1.65;
+    color: var(--mid);
+  }
+
+  .cc-text strong { color: var(--ink); }
+  .cc-text a { color: var(--accent); }
+
+  footer-note {
+    display: block;
+    margin-top: 40px;
+    padding: 24px;
+    background: #f0ede6;
+    border-radius: 4px;
+    font-size: 13px;
+    line-height: 1.65;
+    color: var(--mid);
+  }
+
+  footer-note strong { color: var(--accent); }
+
+  /* Bloque interpretativo de género */
+  .gender-frame {
+    margin: 40px 0 8px 0;
+    background: #1a1a1a;
+    color: #f7f5f0;
+    border-radius: 4px;
+    padding: 28px 32px;
+  }
+
+  .gender-frame-label {
+    font-size: 9.5px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #a8c8b2;
+    margin-bottom: 12px;
+  }
+
+  .gender-frame h3 {
+    font-family: 'Lora', serif;
+    font-size: 17px;
+    font-weight: 600;
+    line-height: 1.3;
+    margin-bottom: 14px;
+    color: #f7f5f0;
+  }
+
+  .gender-frame p {
+    font-size: 13.5px;
+    line-height: 1.7;
+    color: #ccc;
+    margin-bottom: 10px;
+  }
+
+  .gender-frame p:last-child { margin-bottom: 0; }
+  .gender-frame strong { color: #fff; }
+
+  .gender-frame em {
+    font-style: italic;
+    color: #a8c8b2;
+  }
+
+  /* Nota de enlace a otra línea de tiempo */
+  .crosslink-note {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    background: var(--accent-light);
+    border: 1px solid #b8d4bf;
+    border-radius: 4px;
+    padding: 18px 20px;
+    margin-top: 16px;
+    font-size: 13px;
+    line-height: 1.6;
+    color: var(--mid);
+  }
+
+  .crosslink-note .crosslink-icon {
+    font-size: 20px;
+    flex-shrink: 0;
+    margin-top: 1px;
+  }
+
+  .crosslink-note a {
+    color: var(--accent);
+    font-weight: 600;
+    text-decoration: none;
+    border-bottom: 1px solid var(--accent);
+  }
+
+  .crosslink-note a:hover { opacity: 0.75; }
+
+  /* ── Ancho máximo y centrado global ── */
+  body {
+    max-width: 900px;
+    margin: 0 auto;
+    padding-bottom: 80px;
+  }
+
+  header {
+    border-radius: 0 0 6px 6px;
+  }
+
+  .paradigm-bar {
+    max-width: 100%;
+    margin: 28px 0 0 0;
+    padding: 0;
+  }
+
+  .container {
+    max-width: 100%;
+    padding: 0 32px;
+  }
+
+  /* ── Tablet (≤ 768px) ── */
+  @media (max-width: 768px) {
+    header { padding: 36px 24px 32px; }
+    .container { padding: 0 24px; }
+    .paradigm-bar { padding: 0; }
+    .timeline::before { left: 110px; }
+    .event-date { width: 100px; min-width: 100px; font-size: 12px; }
+    .era-label { padding-left: 130px; font-size: 9.5px; }
+    .key-concept { max-width: 100%; }
+    .gender-frame { padding: 22px 24px; }
+  }
+
+  /* ── Móvil (≤ 520px) ── */
+  @media (max-width: 520px) {
+    header { padding: 28px 18px 24px; }
+    .container { padding: 0 18px; }
+
+    /* Paradigm bar: apilado vertical */
+    .paradigm-bar { flex-direction: column; }
+    .paradigm-pill { text-align: left; padding: 10px 18px; font-size: 11px; }
+
+    /* Timeline: colapsar la columna de fecha arriba del contenido */
+    .timeline::before { display: none; }
+
+    .event {
+      flex-direction: column;
+      padding: 20px 0;
+      gap: 6px;
+    }
+
+    .event-date {
+      width: 100%;
+      min-width: unset;
+      text-align: left;
+      padding-right: 0;
+      font-size: 11px;
+      color: var(--mid);
+      padding-top: 0;
+    }
+
+    .event-dot { display: none; }
+
+    .event-content { padding-left: 0; }
+
+    .era-label {
+      padding-left: 0;
+      font-size: 9px;
+      padding-top: 20px;
+    }
+
+    .event-title { font-size: 15px; }
+    .event-body { font-size: 13px; }
+    .key-concept { font-size: 12.5px; max-width: 100%; }
+
+    .gender-frame { padding: 20px 18px; border-radius: 4px; }
+    .gender-frame h3 { font-size: 15px; }
+    .gender-frame p { font-size: 13px; }
+
+    .crosslink-note { flex-direction: column; gap: 8px; }
+    .crosslink-note .crosslink-icon { display: none; }
+
+    .cc-footer { flex-direction: column; gap: 10px; }
+    .cc-badge { font-size: 18px; }
+
+    .sources-section { margin-top: 40px; }
+    .sources-group ul { font-size: 12.5px; }
+
+    footer-note { font-size: 12.5px; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <p class="eyebrow">Antisexismo Lab · Capacitación SNRSJ · Región de Ñuble · 2025</p>
+  <h1>Del castigo al cuidado:<br><em>historia de un cambio de paradigma</em></h1>
+  <p>Línea de tiempo del marco internacional y chileno en justicia juvenil y reinserción social ; para profesionales que acompañan procesos socioeducativos con personas jóvenes en conflicto con la ley.</p>
+</header>
+
+<div class="paradigm-bar">
+  <div class="paradigm-pill p-punitivo">I. Paradigma punitivo-tutelar</div>
+  <div class="paradigm-pill p-transicion">II. Transición</div>
+  <div class="paradigm-pill p-cuidado">III. Paradigma del cuidado</div>
+</div>
+
+<div class="container">
+  <div class="timeline">
+
+    <!-- ERA I -->
+    <div class="era-label era-punitivo">I · Paradigma punitivo-tutelar (siglo XIX ; 1980s)</div>
+
+    <div class="event">
+      <div class="event-date">Siglo XIX–<br>1920s</div>
+      <div class="event-dot dot-punitivo"></div>
+      <div class="event-content">
+        <span class="event-tag tag-punitivo">Doctrina de situación irregular</span>
+        <div class="event-title">El menor como objeto de tutela y corrección</div>
+        <div class="event-body">
+          Las personas menores de edad que infringen la ley son tratadas como <strong>"menores en situación irregular"</strong>: titulares de ningún derecho, sujetos peligrosos, deficientes o en riesgo moral. La respuesta estatal no distingue entre protección y punición. Surge el modelo de los <strong>tribunales de menores</strong> (primer tribunal de menores, Chicago, 1899), con lógica paternalista: el juez decide qué es mejor para el niño sin garantías procesales.
+          <div class="key-concept warn">La infancia no es titular de derechos sino objeto de intervención. El Estado actúa como padre corrector: encierro, trabajo forzado y reeducación moral son equivalentes.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="event">
+      <div class="event-date">1924</div>
+      <div class="event-dot dot-internacional"></div>
+      <div class="event-content">
+        <span class="event-tag tag-internacional">ONU · Ginebra</span>
+        <div class="event-title">
+          <a href="https://www.humanium.org/es/declaracion-de-ginebra/" target="_blank" rel="noopener">Declaración de Ginebra sobre los Derechos del Niño</a>
+        </div>
+        <div class="event-body">
+          Primera declaración internacional que reconoce que las niñas y niños tienen necesidades especiales, aunque sin carácter vinculante. La infancia sigue siendo tratada como categoría tutelar, no de titularidad de derechos.
+        </div>
+      </div>
+    </div>
+
+    <div class="event">
+      <div class="event-date">1959</div>
+      <div class="event-dot dot-internacional"></div>
+      <div class="event-content">
+        <span class="event-tag tag-internacional">ONU</span>
+        <div class="event-title">
+          <a href="https://www.ohchr.org/es/instruments-mechanisms/instruments/declaration-rights-child" target="_blank" rel="noopener">Declaración de los Derechos del Niño</a>
+        </div>
+        <div class="event-body">
+          Amplía los principios de 1924. Introduce el <strong>interés superior del niño</strong> como concepto guía, pero sin obligatoriedad jurídica para los Estados. Sigue dominando la lógica tutelar: el niño como ser incompleto que debe ser protegido/corregido.
+        </div>
+      </div>
+    </div>
+
+    <div class="event">
+      <div class="event-date">1979 · Chile</div>
+      <div class="event-dot dot-punitivo"></div>
+      <div class="event-content">
+        <span class="event-tag tag-chile">Chile · Dictadura</span>
+        <div class="event-title">
+          <a href="https://www.bcn.cl/leychile/navegar?idNorma=6516" target="_blank" rel="noopener">Creación del SENAME (D.L. 2.465)</a>
+        </div>
+        <div class="event-body">
+          En plena dictadura, el Decreto Ley N° 2.465 crea el Servicio Nacional de Menores, combinando en una misma institución la protección de NNA vulnerados con la respuesta a quienes infringen la ley. Esta mezcla funcional reproducirá tensiones estructurales por más de cuatro décadas.
+          <a class="source-link" href="https://www.bcn.cl/leychile/navegar?idNorma=6516" target="_blank" rel="noopener">Texto del D.L. 2.465 ; Biblioteca del Congreso Nacional</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- BLOQUE INTERPRETATIVO DE GÉNERO -->
+    <div class="gender-frame">
+      <div class="gender-frame-label">Clave de lectura · Género y control social</div>
+      <h3>Lo que el paradigma punitivo no vio ;<br>y la ética del cuidado feminista sí nombra</h3>
+      <p>
+        El sistema de justicia de menores no surgió en el vacío: es parte del mismo orden que reguló el comportamiento de mujeres, niñas y niños mediante la moral, el honor y la asignación de espacios sociales diferenciados. <strong>El control social tuvo ;y tiene; género.</strong> La tipificación histórica de delitos como el rapto y el estupro ;orientados a sancionar la transgresión del orden sexual femenino, no a proteger a las mujeres; es evidencia de ello: el derecho penal fue durante décadas un instrumento de control del comportamiento femenino disfrazado de protección <a href="https://www.researchgate.net/publication/390099661_La_desaparicion_del_delito_de_rapto_y_los_cambios_en_el_delito_de_estupro_como_marcadores_de_la_incorporacion_de_la_perspectiva_de_genero_en_el_derecho_penal_mexicano" target="_blank" rel="noopener" style="color:#a8c8b2;">(Cerva Cerna y De la Barrera Montppellier)</a>.
+      </p>
+      <p>
+        Bajo el paradigma punitivo-tutelar, las mujeres fueron recluidas en el espacio doméstico como mecanismo de control; los varones pobres fueron callejizados y, cuando rompían el orden, encerrados. Dos formas distintas de la misma lógica: <em>quien no ocupa el lugar que el patriarcado le asigna, recibe una respuesta del Estado.</em> La violencia que las mujeres ejercen sobre menores ;cuando ocurre; no es una anomalía: es también reproducción del orden patriarcal desde adentro, desde quien también fue sometida a ese control. La incorporación de la perspectiva de género en la argumentación jurídica es un proceso reciente, tardío y todavía incompleto <a href="https://doi.org/10.13140/RG.2.2.33093.77284" target="_blank" rel="noopener" style="color:#a8c8b2;">(De la Barrera Montppellier, 2014)</a>.
+      </p>
+      <p>
+        La violencia patriarcal opera en múltiples direcciones: de hombres a mujeres, de hombres a hombres (especialmente entre varones pobres, racializados, jóvenes), y se reproduce dentro de las propias familias y comunidades. <strong>El castigo a jóvenes en conflicto con la ley y el castigo histórico a las mujeres son expresiones del mismo sistema de control social.</strong>
+      </p>
+      <p>
+        La <em>ética del cuidado feminista</em> nombra precisamente esto: propone desmontar la lógica punitiva sustituyéndola por una lógica de interdependencia, reconocimiento y responsabilidad colectiva. No como retórica ;sino como transformación de las instituciones que reproducen ese control, incluidas las del sistema de reinserción social.
+      </p>
+    </div>
+
+    <!-- NOTA ENLACE LÍNEA DE TIEMPO VIOLENCIA CONTRA MUJERES -->
+    <div class="crosslink-note">
+      <span class="crosslink-icon">↗</span>
+      <span>Para una genealogía más amplia de la construcción jurídica de las mujeres como titulares de derechos ;de los delitos contra la moral y el honor a los crímenes de lesa humanidad; ver la línea de tiempo complementaria: <a href="file:///Users/andrea/Downloads/linea_tiempo_violencia_mujeres.html" title="Próximamente disponible en antisexismo.mx">De la moral al crimen: violencia contra las mujeres y la construcción jurídica de sus derechos</a> · Antisexismo Lab / CUGLE-UNESCO.</span>
+    </div>
+
+    <!-- ERA TRANSICIÓN -->
+    <div class="era-label era-transicion">II · Transición: de la tutela al titular de derechos (1985–2006)</div>
+
+    <div class="event">
+      <div class="event-date">1985</div>
+      <div class="event-dot dot-transicion"></div>
+      <div class="event-content">
+        <span class="event-tag tag-internacional">ONU · Instrumento clave</span>
+        <div class="event-title">
+          <a href="https://www.ohchr.org/es/instruments-mechanisms/instruments/united-nations-standard-minimum-rules-administration-juvenile" target="_blank" rel="noopener">Reglas de Beijing ; Mínimas para la Administración de Justicia de Menores</a>
+        </div>
+        <div class="event-body">
+          Primer instrumento internacional específico de justicia juvenil (Res. 40/33). Establece principios que marcan el giro: <strong>proporcionalidad de la respuesta, desjudicialización, medidas no privativas de libertad, privación de libertad como último recurso.</strong> No es vinculante, pero sienta las bases conceptuales del cambio de paradigma.
+          <div class="key-concept">La privación de libertad no debe ser la respuesta automática. El sistema debe buscar la reintegración, no solo el castigo.</div>
+          <a class="source-link" href="https://www.ohchr.org/es/instruments-mechanisms/instruments/united-nations-standard-minimum-rules-administration-juvenile" target="_blank" rel="noopener">Texto completo ; OHCHR</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="event">
+      <div class="event-date">1989</div>
+      <div class="event-dot dot-transicion"></div>
+      <div class="event-content">
+        <span class="event-tag tag-internacional">ONU · Hito fundacional</span>
+        <div class="event-title">
+          <a href="https://www.ohchr.org/es/instruments-mechanisms/instruments/convention-rights-child" target="_blank" rel="noopener">Convención sobre los Derechos del Niño (CDN)</a>
+        </div>
+        <div class="event-body">
+          El tratado internacional de mayor ratificación en la historia. <strong>Cambio de paradigma central</strong>: las personas menores de 18 años son <em>titulares plenas de derechos</em>, no objetos de tutela. Principios rectores: interés superior del niño, no discriminación, derecho a la vida y al desarrollo, participación. Sustituye formalmente la doctrina de situación irregular por la <strong>Doctrina de Protección Integral</strong>.
+          <div class="key-concept">La persona joven que infringe la ley es titular de derechos, incluyendo garantías procesales plenas. El Estado no puede intervenir sin causa, sin proceso y sin proporcionalidad.</div>
+          <a class="source-link" href="https://www.ohchr.org/es/instruments-mechanisms/instruments/convention-rights-child" target="_blank" rel="noopener">Texto completo ; OHCHR</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="event">
+      <div class="event-date">1990</div>
+      <div class="event-dot dot-transicion"></div>
+      <div class="event-content">
+        <span class="event-tag tag-internacional">ONU · Paquete normativo</span>
+        <div class="event-title">Directrices de Riad · Reglas de La Habana · Reglas de Tokio</div>
+        <div class="event-body">
+          Tres instrumentos que completan el nuevo marco internacional:
+          <br><br>
+          <strong><a href="https://www.ohchr.org/es/instruments-mechanisms/instruments/united-nations-guidelines-prevention-juvenile-delinquency-riyadh" target="_blank" rel="noopener">Directrices de Riad</a> (Res. 45/112):</strong> la prevención de la delincuencia juvenil pasa por garantizar la participación activa de jóvenes en la sociedad y reducir factores estructurales de exclusión.
+          <br><br>
+          <strong><a href="https://www.ohchr.org/es/instruments-mechanisms/instruments/united-nations-rules-protection-juveniles-deprived-their-liberty" target="_blank" rel="noopener">Reglas de La Habana</a> (Res. 45/113):</strong> condiciones mínimas para jóvenes privados de libertad. El encierro debe garantizar educación, recreación, salud y contacto familiar.
+          <br><br>
+          <strong><a href="https://www.ohchr.org/es/instruments-mechanisms/instruments/united-nations-standard-minimum-rules-non-custodial-measures-tokyo" target="_blank" rel="noopener">Reglas de Tokio</a> (Res. 45/110):</strong> fomento de alternativas a la prisión: medidas en comunidad, libertad asistida, programas socioeducativos.
+        </div>
+      </div>
+    </div>
+
+    <div class="event">
+      <div class="event-date">1990 · Chile</div>
+      <div class="event-dot dot-transicion"></div>
+      <div class="event-content">
+        <span class="event-tag tag-chile">Chile · Retorno democrático</span>
+        <div class="event-title">Chile ratifica la CDN</div>
+        <div class="event-body">
+          Con el retorno a la democracia, Chile ratifica la Convención. Sin embargo, la legislación interna (Ley de Menores de 1967 y el modelo SENAME) sigue operando bajo la lógica tutelar. La brecha entre el compromiso internacional y la práctica institucional se mantendrá por más de una década.
+        </div>
+      </div>
+    </div>
+
+    <div class="event">
+      <div class="event-date">2005 · Chile</div>
+      <div class="event-dot dot-transicion"></div>
+      <div class="event-content">
+        <span class="event-tag tag-chile">Chile · Ley 20.084</span>
+        <div class="event-title">
+          <a href="https://www.bcn.cl/leychile/navegar?idNorma=244803" target="_blank" rel="noopener">Ley de Responsabilidad Penal Adolescente</a>
+        </div>
+        <div class="event-body">
+          Hito legislativo chileno (vigente desde 2007). Incorpora las garantías de la CDN al sistema de justicia juvenil: separación entre el sistema penal adolescente y el de adultos, catálogo de sanciones diferenciadas, énfasis en medidas en el medio libre, reconocimiento explícito de la finalidad <strong>socioeducativa</strong> de las sanciones.
+          <div class="key-concept">La sanción no es punición pura: tiene que servir para la reintegración social. La educación es parte estructural de cualquier medida, incluso las privativas de libertad.</div>
+          <a class="source-link" href="https://www.bcn.cl/leychile/navegar?idNorma=244803" target="_blank" rel="noopener">Texto de la Ley 20.084 ; Biblioteca del Congreso Nacional</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- ERA III -->
+    <div class="era-label era-cuidado">III · Paradigma del cuidado y la protección integral (2007 ; presente)</div>
+
+    <div class="event">
+      <div class="event-date">2007–2019</div>
+      <div class="event-dot dot-cuidado"></div>
+      <div class="event-content">
+        <span class="event-tag tag-cuidado">Implementación y crisis</span>
+        <div class="event-title">SENAME en tensión: entre la protección y la sanción</div>
+        <div class="event-body">
+          La Ley 20.084 opera bajo el alero del SENAME, institución diseñada para otro paradigma. Denuncias, muertes en centros, informes de comisiones parlamentarias y reportes del Comité ONU-CDN evidencian la <strong>crisis estructural del modelo</strong>: hacinamiento, violencia institucional, ausencia de programas efectivos de reinserción. El desistimiento como objetivo no tiene condiciones institucionales para concretarse.
+          <div class="key-concept warn">El cambio de paradigma legal no cambia la cultura institucional. Las prácticas punitivas persisten aunque las leyes digan otra cosa.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="event">
+      <div class="event-date">2010</div>
+      <div class="event-dot dot-cuidado"></div>
+      <div class="event-content">
+        <span class="event-tag tag-internacional">ONU · Género en privación de libertad</span>
+        <div class="event-title">
+          <a href="https://www.ohchr.org/es/instruments-mechanisms/instruments/united-nations-rules-treatment-women-prisoners-and-non-custodial" target="_blank" rel="noopener">Reglas de Bangkok ; Tratamiento de reclusas y medidas no privativas de libertad para mujeres</a>
+        </div>
+        <div class="event-body">
+          Primer instrumento internacional que reconoce explícitamente las <strong>necesidades diferenciadas de las mujeres en el sistema penal</strong>, incluyendo adolescentes. Principios clave: atención a la maternidad y vínculos con hijos e hijas durante la reclusión; prohibición de aislamiento para mujeres embarazadas o lactantes; reconocimiento de que la mayoría de las mujeres en conflicto con la ley son sobrevivientes de violencia de género previa; preferencia por medidas no privativas de libertad con perspectiva de género. Las Reglas de Bangkok evidencian que el sistema penal fue diseñado para cuerpos masculinos y que <strong>la "neutralidad" del modelo punitivo es en sí misma una forma de sexismo institucional.</strong>
+          <div class="key-concept">Las mujeres jóvenes y adolescentes en conflicto con la ley llegan al sistema atravesadas por trayectorias de violencia. Un paradigma del cuidado tiene que leer esas trayectorias, no ignorarlas.</div>
+          <a class="source-link" href="https://www.ohchr.org/es/instruments-mechanisms/instruments/united-nations-rules-treatment-women-prisoners-and-non-custodial" target="_blank" rel="noopener">Texto completo ; OHCHR</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="event">
+      <div class="event-date">2015 · Chile</div>
+      <div class="event-dot dot-cuidado"></div>
+      <div class="event-content">
+        <span class="event-tag tag-chile">Chile · Política Nacional</span>
+        <div class="event-title">
+          <a href="https://www.minjusticia.gob.cl/politica-nacional-de-ninos-ninas-y-adolescentes/" target="_blank" rel="noopener">Política Nacional de Niños, Niñas y Adolescentes 2015–2025</a>
+        </div>
+        <div class="event-body">
+          Marco de largo plazo que orienta al país hacia un <strong>Sistema de Garantías y Protección Integral de Derechos</strong>. Sienta las bases institucionales para la separación de funciones dentro del SENAME y para la creación de servicios especializados.
+        </div>
+      </div>
+    </div>
+
+    <div class="event">
+      <div class="event-date">2018 · Chile</div>
+      <div class="event-dot dot-cuidado"></div>
+      <div class="event-content">
+        <span class="event-tag tag-chile">Chile · Arquitectura institucional</span>
+        <div class="event-title">Subsecretaría de la Niñez y Defensoría de la Niñez</div>
+        <div class="event-body">
+          Creación de dos nuevas instituciones que comienzan a desagregar el enorme mandato del SENAME: la Subsecretaría como órgano de política pública y la <a href="https://www.defensorianinez.cl/" target="_blank" rel="noopener">Defensoría</a> como mecanismo independiente de control. El modelo de institución única para todo ya no es sostenible.
+        </div>
+      </div>
+    </div>
+
+    <div class="event">
+      <div class="event-date">2021 · Chile</div>
+      <div class="event-dot dot-cuidado"></div>
+      <div class="event-content">
+        <span class="event-tag tag-chile">Chile · Separación institucional</span>
+        <div class="event-title">
+          <a href="https://www.bcn.cl/leychile/navegar?idNorma=1155842" target="_blank" rel="noopener">Creación del Servicio de Protección Especializada (SPE)</a>
+        </div>
+        <div class="event-body">
+          Primera gran escisión del SENAME: el SPE asume la atención de NNA con derechos vulnerados (dependiente del Ministerio de Desarrollo Social y Familia). La justicia juvenil todavía sigue en el SENAME, pero el desmembramiento ya comenzó.
+          <a class="source-link" href="https://www.bcn.cl/leychile/navegar?idNorma=1155842" target="_blank" rel="noopener">Ley 21.302 ; Biblioteca del Congreso Nacional</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="event">
+      <div class="event-date">2022 · Chile</div>
+      <div class="event-dot dot-cuidado"></div>
+      <div class="event-content">
+        <span class="event-tag tag-chile">Chile · Marco de derechos</span>
+        <div class="event-title">
+          <a href="https://www.bcn.cl/leychile/navegar?idNorma=1181511" target="_blank" rel="noopener">Ley 21.430 ; Garantías y Protección Integral de la Niñez</a>
+        </div>
+        <div class="event-body">
+          Primera ley chilena que consagra con rango legal los principios de la CDN de manera transversal. Establece el interés superior como principio rector de toda política, programa e intervención del Estado con NNA.
+          <a class="source-link" href="https://www.bcn.cl/leychile/navegar?idNorma=1181511" target="_blank" rel="noopener">Ley 21.430 ; Biblioteca del Congreso Nacional</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="event">
+      <div class="event-date">Enero 2023 · Chile</div>
+      <div class="event-dot dot-cuidado"></div>
+      <div class="event-content">
+        <span class="event-tag tag-cuidado">Hito Chile · SNRSJ</span>
+        <div class="event-title">
+          <a href="https://www.bcn.cl/leychile/navegar?idNorma=1186009" target="_blank" rel="noopener">Ley 21.527 ; Creación del SNRSJ</a>
+        </div>
+        <div class="event-body">
+          Publicada el 12 de enero de 2023. Crea el <strong>Servicio Nacional de Reinserción Social Juvenil</strong> como sucesor del SENAME en materia de justicia adolescente, bajo tuición del Ministerio de Justicia y DDHH. Sus principios rectores son expresión del paradigma del cuidado:
+          <br><br>
+          ; <strong>Enfoque de derechos</strong> (no solo conducta)<br>
+          ; <strong>Perspectiva de desarrollo progresivo</strong> (cada joven es diferente)<br>
+          ; <strong>Especialización intersectorial</strong><br>
+          ; <strong>Finalidad socioeducativa</strong> de toda sanción<br>
+          ; <strong>Intervención en el medio libre</strong> como prioridad<br>
+          ; <strong>Enfoque de género</strong>: reconocimiento explícito de que el género atraviesa las trayectorias de vida de jóvenes en conflicto con la ley ;tanto en mujeres y adolescentes trans como en varones cuya masculinidad fue construida en contextos de violencia; y que la intervención socioeducativa debe leer esas trayectorias sin reproducir los mandatos que las produjeron<br><br>
+          El proyecto tuvo origen en el mensaje de la expresidenta Bachelet en 2017. Su entrada en operaciones implica el cierre definitivo del SENAME.
+          <div class="key-concept">El SNRSJ no administra castigos: administra procesos de modificación conductual e integración social. La educación y el vínculo son el centro, no el control.</div>
+          <a class="source-link" href="https://www.bcn.cl/leychile/navegar?idNorma=1186009" target="_blank" rel="noopener">Ley 21.527 ; Biblioteca del Congreso Nacional</a>
+          &nbsp;&nbsp;
+          <a class="source-link" href="https://www.reinsercionjuvenil.cl/quienes-somos/" target="_blank" rel="noopener">Sitio oficial SNRSJ</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="event">
+      <div class="event-date">Hoy</div>
+      <div class="event-dot dot-cuidado"></div>
+      <div class="event-content">
+        <span class="event-tag tag-cuidado">Horizonte</span>
+        <div class="event-title">El paradigma del desistimiento y la justicia restaurativa</div>
+        <div class="event-body">
+          La evidencia internacional y regional muestra que los enfoques más efectivos van más allá del control conductual: el <strong>paradigma del desistimiento</strong> entiende el abandono del delito como un proceso de construcción de identidad, vínculos y proyecto de vida. La <strong>justicia restaurativa</strong> involucra a víctimas, comunidad y jóvenes. Las personas profesionales que acompañan estos procesos son, en este modelo, <strong>facilitadoras de cuidado</strong>, no ejecutoras de sanciones.
+          <div class="key-concept">El desistimiento no se decreta ni se premia. Emerge cuando una persona joven tiene razones para hacerlo: vínculos, oportunidades, reconocimiento como titular de derechos.</div>
+          <div class="key-concept" style="margin-top:10px;">Una intervención socioeducativa antisexista no solo evita reproducir violencia: activamente construye otras formas de habitar el mundo. Para profesionales que acompañan estos procesos, eso implica revisar los propios mandatos de género que se traen al trabajo ;incluyendo la idea de que "cuidar" es un trabajo de mujeres y "controlar" es un trabajo de hombres.</div>
+        </div>
+      </div>
+    </div>
+
+  </div><!-- end timeline -->
+
+  <footer-note>
+    <strong>Para el trabajo en sala:</strong> Esta línea de tiempo muestra que el cambio de paradigma ;del castigo al cuidado; no es una decisión administrativa sino el resultado de décadas de presión internacional, activismo, crisis institucional y reforma legislativa. Cada profesional que acompaña un proceso socioeducativo con jóvenes en conflicto con la ley es parte de ese cambio. La pregunta no es solo "¿qué hace el SNRSJ?" sino "¿qué cultura institucional necesitamos construir para que el paradigma sea real en la práctica?"
+  </footer-note>
+
+  <!-- FUENTES -->
+  <div class="sources-section">
+    <h2>Fuentes</h2>
+
+    <div class="sources-group">
+      <h3>Instrumentos internacionales (ONU · OHCHR)</h3>
+      <ul>
+        <li>Naciones Unidas (1985). <em>Reglas mínimas de las Naciones Unidas para la administración de la justicia de menores (Reglas de Beijing)</em>. Res. 40/33. <a href="https://www.ohchr.org/es/instruments-mechanisms/instruments/united-nations-standard-minimum-rules-administration-juvenile" target="_blank" rel="noopener">ohchr.org</a></li>
+        <li>Naciones Unidas (1989). <em>Convención sobre los Derechos del Niño</em>. <a href="https://www.ohchr.org/es/instruments-mechanisms/instruments/convention-rights-child" target="_blank" rel="noopener">ohchr.org</a></li>
+        <li>Naciones Unidas (1990). <em>Directrices de las Naciones Unidas para la prevención de la delincuencia juvenil (Directrices de Riad)</em>. Res. 45/112. <a href="https://www.ohchr.org/es/instruments-mechanisms/instruments/united-nations-guidelines-prevention-juvenile-delinquency-riyadh" target="_blank" rel="noopener">ohchr.org</a></li>
+        <li>Naciones Unidas (1990). <em>Reglas de las Naciones Unidas para la protección de menores privados de libertad (Reglas de La Habana)</em>. Res. 45/113. <a href="https://www.ohchr.org/es/instruments-mechanisms/instruments/united-nations-rules-protection-juveniles-deprived-their-liberty" target="_blank" rel="noopener">ohchr.org</a></li>
+        <li>Naciones Unidas (1990). <em>Reglas mínimas de las Naciones Unidas sobre las medidas no privativas de la libertad (Reglas de Tokio)</em>. Res. 45/110. <a href="https://www.ohchr.org/es/instruments-mechanisms/instruments/united-nations-standard-minimum-rules-non-custodial-measures-tokyo" target="_blank" rel="noopener">ohchr.org</a></li>
+        <li>Naciones Unidas (2010). <em>Reglas de las Naciones Unidas para el tratamiento de las reclusas y medidas no privativas de la libertad para las mujeres delincuentes (Reglas de Bangkok)</em>. Res. 65/229. <a href="https://www.ohchr.org/es/instruments-mechanisms/instruments/united-nations-rules-treatment-women-prisoners-and-non-custodial" target="_blank" rel="noopener">ohchr.org</a></li>
+      </ul>
+    </div>
+
+    <div class="sources-group">
+      <h3>Legislación chilena (Biblioteca del Congreso Nacional)</h3>
+      <ul>
+        <li>Chile (1979). <em>Decreto Ley 2.465 que crea el SENAME</em>. <a href="https://www.bcn.cl/leychile/navegar?idNorma=6516" target="_blank" rel="noopener">bcn.cl</a></li>
+        <li>Chile (2005). <em>Ley 20.084 sobre Responsabilidad Penal Adolescente</em>. <a href="https://www.bcn.cl/leychile/navegar?idNorma=244803" target="_blank" rel="noopener">bcn.cl</a></li>
+        <li>Chile (2021). <em>Ley 21.302 que crea el Servicio de Protección Especializada a la Niñez y Adolescencia</em>. <a href="https://www.bcn.cl/leychile/navegar?idNorma=1155842" target="_blank" rel="noopener">bcn.cl</a></li>
+        <li>Chile (2022). <em>Ley 21.430 sobre Garantías y Protección Integral a los Derechos de la Niñez y Adolescencia</em>. <a href="https://www.bcn.cl/leychile/navegar?idNorma=1181511" target="_blank" rel="noopener">bcn.cl</a></li>
+        <li>Chile (2023). <em>Ley 21.527 que crea el Servicio Nacional de Reinserción Social Juvenil</em>. <a href="https://www.bcn.cl/leychile/navegar?idNorma=1186009" target="_blank" rel="noopener">bcn.cl</a></li>
+      </ul>
+    </div>
+
+    <div class="sources-group">
+      <h3>Publicaciones de referencia · Género, derecho y control social</h3>
+      <ul>
+        <li>Cerva Cerna, D. y De la Barrera Montppellier, A. "La desaparición del delito de rapto y los cambios en el delito de estupro como marcadores de la incorporación de la perspectiva de género en el derecho penal mexicano." <a href="https://www.researchgate.net/publication/390099661_La_desaparicion_del_delito_de_rapto_y_los_cambios_en_el_delito_de_estupro_como_marcadores_de_la_incorporacion_de_la_perspectiva_de_genero_en_el_derecho_penal_mexicano" target="_blank" rel="noopener">ResearchGate</a></li>
+        <li>De la Barrera Montppellier, A. (2014). <em>La institucionalización de la igualdad de género en la argumentación jurídica del Poder Judicial Federal mexicano (SCJN, 2008–2013)</em>. Tesis de Maestría, Instituto Mora. <a href="https://doi.org/10.13140/RG.2.2.33093.77284" target="_blank" rel="noopener">doi:10.13140/RG.2.2.33093.77284</a></li>
+        <li>De la Barrera Montppellier, A. "Discriminación y violencia laboral contra mujeres estudiantes universitarias." <em>La Ventana</em>. <a href="https://doi.org/10.32870/lv.v0i0.8159" target="_blank" rel="noopener">doi:10.32870/lv.v0i0.8159</a> · <a href="https://www.researchgate.net/publication/396385487_Discriminacion_y_violencia_laboral_contra_mujeres_estudiantes_universitarias" target="_blank" rel="noopener">ResearchGate</a></li>
+      </ul>
+    </div>
+
+    <div class="sources-group">
+      <h3>Fuentes académicas y documentos de referencia</h3>
+      <ul>
+        <li>Hernández, N. y Donoso, G. (2026). "Estudios sobre reinserción social juvenil en Chile y América Latina: una revisión de literatura académica." <em>Última Década</em>. <a href="https://ultimadecada.uchile.cl/index.php/UD/article/view/83626" target="_blank" rel="noopener">ultimadecada.uchile.cl</a></li>
+        <li>Morales, H. (2010). <em>Una aproximación a la situación de los Servicios de Reinserción Social para Adolescentes en conflicto con la Ley Penal en los Sistemas de Justicia Juvenil de América Latina</em>. UNODC.</li>
+        <li>Servicio Nacional de Reinserción Social Juvenil (2023–). <em>¿Quiénes somos?</em> <a href="https://www.reinsercionjuvenil.cl/quienes-somos/" target="_blank" rel="noopener">reinsercionjuvenil.cl</a></li>
+        <li>UNODC (s/f). <em>Recopilación de reglas y normas de las Naciones Unidas en la esfera de la prevención del delito y la justicia penal</em>. <a href="https://www.unodc.org/documents/justice-and-prison-reform/S_Ebook.pdf" target="_blank" rel="noopener">unodc.org</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- CC -->
+  <div class="cc-footer">
+    <div class="cc-badge">©</div>
+    <div class="cc-text">
+      <strong>Antisexismo Lab</strong> · <a href="https://antisexismo.mx/" target="_blank" rel="noopener">antisexismo.mx</a><br>
+      Esta línea de tiempo se distribuye bajo licencia <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.es" target="_blank" rel="noopener"><strong>Creative Commons Atribución-NoComercial-CompartirIgual 4.0 Internacional (CC BY-NC-SA 4.0)</strong></a>. Puedes compartirla y adaptarla con atribución, sin fines comerciales y bajo la misma licencia.
+      <br><br>
+      Elaborada con fines educativos por el <a href="https://antisexismo.mx/" target="_blank" rel="noopener">Laboratorio de Antisexismo</a> para la <a href="https://www.corporacionllequen.cl/" target="_blank" rel="noopener"><strong>Corporación Llequén</strong></a> (Región de Ñuble, Chile).
+      <br><br>
+      Autoría: <strong>Dra. Andrea de la Barrera Montppellier</strong>, Fundadora del Laboratorio de Antisexismo y Directora del Programa de Política Educativa Antisexista de la <a href="https://catedraunescogeneroliderazgoyequidad.org/" target="_blank" rel="noopener">Cátedra UNESCO en Género, Liderazgo y Equidad (CUGLE)</a>, coordinada por la <strong>Dra. Rosa Rojas Paredes</strong> y hospedada en la Universidad de Guadalajara.
+      <br><br>
+      <span style="color:#888;">Asistencia editorial y de código: Claude Sonnet 4.6 (Anthropic).</span>
+    </div>
+  </div>
+
+</div><!-- end container -->
+
+
+
+</body></html>
