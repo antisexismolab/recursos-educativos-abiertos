@@ -1,0 +1,605 @@
+
+<!DOCTYPE html>
+<!-- saved from url=(0059)file:///Users/andrea/Downloads/recursos-lineas-index_2.html -->
+<html lang="es"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Líneas de tiempo · Recursos Educativos Abiertos · Antisexismo Lab</title>
+<meta name="description" content="Serie de líneas de tiempo educativas sobre derechos humanos, género y justicia juvenil en América Latina. Adaptadas al contexto chileno. Antisexismo Lab.">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Jost:wght@300;400;500;600&display=swap');
+
+  :root {
+    --cream: #f7f2ea;
+    --sage: #7a9e7e;
+    --sage-light: #eaf2eb;
+    --terra: #c47a4a;
+    --terra-light: #f9ede4;
+    --ink: #2a2520;
+    --mid: #5a5250;
+    --rule: #d8d0c4;
+    --purple: #5b2d8e;
+    --purple-light: #ede6f5;
+    --gold: #b8960c;
+    --gold-light: #faf3db;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'Jost', sans-serif;
+    background: var(--cream);
+    color: var(--ink);
+    min-height: 100vh;
+  }
+
+  a { color: inherit; text-decoration: none; }
+
+  /* ── HEADER ── */
+  header {
+    background: var(--ink);
+    color: var(--cream);
+    padding: 56px 40px 48px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  /* Línea de tiempo decorativa de fondo */
+  header::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: rgba(255,255,255,0.06);
+    transform: translateY(-50%);
+  }
+
+  .header-inner {
+    max-width: 960px;
+    margin: 0 auto;
+    position: relative;
+  }
+
+  .lab-brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 40px;
+  }
+
+  .lab-brand-name {
+    font-family: 'Jost', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--sage);
+  }
+
+  .lab-brand-sep {
+    width: 1px;
+    height: 16px;
+    background: rgba(255,255,255,0.2);
+  }
+
+  .lab-brand-sub {
+    font-size: 12px;
+    color: rgba(255,255,255,0.4);
+    letter-spacing: 0.08em;
+  }
+
+  /* Mini timeline decorativa */
+  .mini-timeline {
+    display: flex;
+    align-items: center;
+    gap: 0;
+    margin-bottom: 32px;
+    overflow: hidden;
+  }
+
+  .mt-node {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    flex-shrink: 0;
+  }
+
+  .mt-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--sage);
+  }
+
+  .mt-dot.terra { background: var(--terra); }
+  .mt-dot.purple { background: var(--purple); }
+  .mt-dot.gold { background: var(--gold); }
+  .mt-dot.dim { background: rgba(255,255,255,0.2); }
+
+  .mt-year {
+    font-size: 9px;
+    color: rgba(255,255,255,0.35);
+    letter-spacing: 0.06em;
+    white-space: nowrap;
+  }
+
+  .mt-line {
+    flex: 1;
+    height: 1px;
+    background: rgba(255,255,255,0.12);
+    min-width: 20px;
+    max-width: 60px;
+  }
+
+  header h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(28px, 4vw, 46px);
+    font-weight: 700;
+    line-height: 1.15;
+    max-width: 680px;
+    margin-bottom: 16px;
+  }
+
+  header h1 em {
+    font-style: italic;
+    color: var(--sage);
+  }
+
+  header p {
+    font-size: 15px;
+    color: rgba(255,255,255,0.6);
+    max-width: 580px;
+    line-height: 1.7;
+  }
+
+  .chile-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 24px;
+    background: rgba(122,158,126,0.15);
+    border: 1px solid rgba(122,158,126,0.3);
+    border-radius: 4px;
+    padding: 8px 14px;
+    font-size: 12px;
+    color: var(--sage);
+    font-weight: 500;
+    letter-spacing: 0.04em;
+  }
+
+  .chile-badge::before {
+    content: '📍';
+    font-size: 13px;
+  }
+
+  /* ── SERIE INTRO ── */
+  .serie-intro {
+    max-width: 960px;
+    margin: 56px auto 0;
+    padding: 0 40px;
+  }
+
+  .serie-eyebrow {
+    font-size: 10px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: var(--sage);
+    margin-bottom: 12px;
+  }
+
+  .serie-intro h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    font-weight: 600;
+    color: var(--ink);
+    margin-bottom: 12px;
+  }
+
+  .serie-intro p {
+    font-size: 14px;
+    color: var(--mid);
+    line-height: 1.75;
+    max-width: 680px;
+  }
+
+  /* ── TARJETAS ── */
+  .cards-grid {
+    max-width: 960px;
+    margin: 40px auto 0;
+    padding: 0 40px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+  }
+
+  .card {
+    background: #fff;
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0 1px 4px rgba(42,37,32,0.08);
+    transition: box-shadow 0.2s, transform 0.2s;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .card:hover {
+    box-shadow: 0 4px 16px rgba(42,37,32,0.12);
+    transform: translateY(-2px);
+  }
+
+  .card.proxima {
+    opacity: 0.7;
+    cursor: default;
+  }
+
+  .card.proxima:hover {
+    box-shadow: 0 1px 4px rgba(42,37,32,0.08);
+    transform: none;
+  }
+
+  .card-stripe {
+    height: 5px;
+    flex-shrink: 0;
+  }
+
+  .stripe-reinsercion { background: #2d5a3d; }
+  .stripe-derechos { background: var(--purple); }
+  .stripe-conferencias { background: #2d7a5a; }
+
+  .card-body {
+    padding: 24px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .card-tag {
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+
+  .tag-reinsercion { color: #2d5a3d; }
+  .tag-derechos { color: var(--purple); }
+  .tag-conferencias { color: #1a4a35; }
+  
+  .cta-conferencias { background: #1a4a35; color: #fff; }
+
+  .card-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 17px;
+    font-weight: 600;
+    line-height: 1.35;
+    color: var(--ink);
+    margin-bottom: 10px;
+  }
+
+  .card-subtitle {
+    font-size: 12px;
+    color: var(--mid);
+    line-height: 1.6;
+    flex: 1;
+    margin-bottom: 20px;
+  }
+
+  .card-eras {
+    display: flex;
+    gap: 4px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+  }
+
+  .era-chip {
+    font-size: 10px;
+    padding: 3px 8px;
+    border-radius: 3px;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+  }
+
+  .chip-reinsercion { background: #e8f0ea; color: #2d5a3d; }
+  .chip-derechos { background: var(--purple-light); color: var(--purple); }
+  .chip-conferencias { background: #c8eadc; color: #1a4a35; }
+
+  .card-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+    font-weight: 600;
+    padding: 10px 16px;
+    border-radius: 4px;
+    transition: opacity 0.15s;
+    align-self: flex-start;
+  }
+
+  .card-cta:hover { opacity: 0.85; }
+
+  .cta-reinsercion { background: #2d5a3d; color: #fff; }
+  .cta-derechos { background: var(--purple); color: #fff; }
+  .cta-proximamente {
+    background: var(--cream);
+    color: var(--mid);
+    border: 1px solid var(--rule);
+    cursor: default;
+  }
+
+  .card-cta::after { content: '→'; }
+  .cta-proximamente::after { content: ''; }
+
+  /* ── MEXICO BANNER ── */
+  .mexico-banner {
+    max-width: 960px;
+    margin: 48px auto 0;
+    padding: 0 40px;
+  }
+
+  .mexico-inner {
+    background: var(--terra-light);
+    border: 1px solid rgba(196,122,74,0.2);
+    border-left: 4px solid var(--terra);
+    border-radius: 0 6px 6px 0;
+    padding: 24px 28px;
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+  }
+
+  .mexico-icon {
+    font-size: 24px;
+    flex-shrink: 0;
+    line-height: 1;
+    margin-top: 2px;
+  }
+
+  .mexico-text h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--terra);
+    margin-bottom: 6px;
+  }
+
+  .mexico-text p {
+    font-size: 13px;
+    color: var(--mid);
+    line-height: 1.65;
+  }
+
+  /* ── SOBRE LA SERIE ── */
+  .sobre-section {
+    max-width: 960px;
+    margin: 56px auto 0;
+    padding: 0 40px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    border-top: 1px solid var(--rule);
+    padding-top: 48px;
+  }
+
+  .sobre-block h3 {
+    font-size: 11px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: var(--sage);
+    margin-bottom: 12px;
+  }
+
+  .sobre-block p, .sobre-block li {
+    font-size: 13px;
+    color: var(--mid);
+    line-height: 1.7;
+  }
+
+  .sobre-block ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  .sobre-block ul li {
+    padding: 4px 0;
+    padding-left: 16px;
+    position: relative;
+  }
+
+  .sobre-block ul li::before {
+    content: '·';
+    position: absolute;
+    left: 0;
+    color: var(--sage);
+    font-weight: 700;
+  }
+
+  .sobre-block a {
+    color: var(--sage);
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .sobre-block a:hover { border-color: var(--sage); }
+
+  /* ── FOOTER ── */
+  footer {
+    background: var(--ink);
+    color: rgba(255,255,255,0.5);
+    margin-top: 64px;
+    padding: 40px;
+    font-size: 12.5px;
+    line-height: 1.7;
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+  }
+
+  .cc-badge {
+    font-size: 28px;
+    flex-shrink: 0;
+    color: rgba(255,255,255,0.3);
+    line-height: 1;
+    margin-top: 2px;
+  }
+
+  footer a { color: var(--sage); }
+
+  @media (max-width: 680px) {
+    header { padding: 40px 20px; }
+    .serie-intro, .cards-grid, .mexico-banner, .sobre-section { padding: 0 20px; }
+    footer { padding: 32px 20px; flex-direction: column; }
+    .sobre-section { grid-template-columns: 1fr; gap: 28px; }
+    .mini-timeline { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+
+    <div class="lab-brand">
+      <span class="lab-brand-name">Antisexismo Lab</span>
+      <span class="lab-brand-sep"></span>
+      <span class="lab-brand-sub">Recursos Educativos Abiertos</span>
+    </div>
+
+    <!-- Mini timeline decorativa -->
+    <div class="mini-timeline">
+      <div class="mt-node"><div class="mt-dot dim"></div><div class="mt-year">1948</div></div>
+      <div class="mt-line"></div>
+      <div class="mt-node"><div class="mt-dot purple"></div><div class="mt-year">1979</div></div>
+      <div class="mt-line"></div>
+      <div class="mt-node"><div class="mt-dot gold"></div><div class="mt-year">1994</div></div>
+      <div class="mt-line"></div>
+      <div class="mt-node"><div class="mt-dot purple"></div><div class="mt-year">2001</div></div>
+      <div class="mt-line"></div>
+      <div class="mt-node"><div class="mt-dot terra"></div><div class="mt-year">2004</div></div>
+      <div class="mt-line"></div>
+      <div class="mt-node"><div class="mt-dot terra"></div><div class="mt-year">2009</div></div>
+      <div class="mt-line"></div>
+      <div class="mt-node"><div class="mt-dot dim"></div><div class="mt-year">2023</div></div>
+    </div>
+
+    <h1>Líneas de tiempo:<br><em>derecho, género y justicia</em><br>en América Latina</h1>
+    <p>Serie de recursos educativos abiertos sobre la construcción histórica de derechos humanos, igualdad de género y justicia juvenil en la región. Elaborados con fines de capacitación y educación con perspectiva de género.</p>
+
+    <div class="chile-badge">Adaptadas al contexto chileno · versiones México en desarrollo</div>
+
+  </div>
+</header>
+
+<!-- INTRO SERIE -->
+<div class="serie-intro">
+  <p class="serie-eyebrow">Serie · 3 recursos · Chile</p>
+  <h2>¿Qué son estas líneas de tiempo?</h2>
+  <p>Cada línea de tiempo recorre una genealogía específica — los hitos legislativos, jurisprudenciales y de movimiento social que explican el estado actual del derecho en un área determinada. Están diseñadas para profesionales que acompañan procesos educativos, de capacitación o de intervención con perspectiva de género y derechos humanos, y para personas que quieren entender el contexto normativo de su práctica.</p>
+</div>
+
+<!-- TARJETAS -->
+<div class="cards-grid">
+
+  <!-- Tarjeta 1: Reinserción -->
+  <div class="card">
+    <div class="card-stripe stripe-reinsercion"></div>
+    <div class="card-body">
+      <div class="card-tag tag-reinsercion">🇨🇱 Justicia juvenil · Chile</div>
+      <div class="card-title">Del castigo al cuidado</div>
+      <div class="card-subtitle">Hitos internacionales y legislación chilena en justicia juvenil y reinserción social · desde las Reglas de Beijing hasta la creación del SNRSJ.</div>
+      <div class="card-eras">
+        <span class="era-chip chip-reinsercion">I · Paradigma punitivo</span>
+        <span class="era-chip chip-reinsercion">II · Transición</span>
+        <span class="era-chip chip-reinsercion">III · Paradigma del cuidado</span>
+      </div>
+      <a class="card-cta cta-reinsercion" href="file:///Users/andrea/Downloads/linea_tiempo_reinsercion.html">Ver línea de tiempo</a>
+    </div>
+  </div>
+
+  <!-- Tarjeta 2: Derechos mujeres -->
+  <div class="card">
+    <div class="card-stripe stripe-derechos"></div>
+    <div class="card-body">
+      <div class="card-tag tag-derechos">🇨🇱 Derechos de las mujeres · ALC · Chile</div>
+      <div class="card-title">De la moral al crimen de lesa humanidad</div>
+      <div class="card-subtitle">Violencia contra las mujeres y la construcción jurídica de sus derechos · de los delitos contra el honor al reconocimiento como crimen de lesa humanidad.</div>
+      <div class="card-eras">
+        <span class="era-chip chip-derechos">I · Objeto moral</span>
+        <span class="era-chip chip-derechos">II · Sujeto emergente</span>
+        <span class="era-chip chip-derechos">III · Titular</span>
+        <span class="era-chip chip-derechos">IV · Autonomía</span>
+      </div>
+      <a class="card-cta cta-derechos" href="file:///Users/andrea/Downloads/linea_tiempo_violencia_mujeres.html">Ver línea de tiempo</a>
+    </div>
+  </div>
+
+  <!-- Tarjeta 3: Conferencias -->
+  <div class="card">
+    <div class="card-stripe stripe-conferencias"></div>
+    <div class="card-body">
+      <div class="card-tag tag-conferencias">Agenda regional · ALC</div>
+      <div class="card-title">La voz de las mujeres en la región</div>
+      <div class="card-subtitle">Conferencias Regionales sobre la Mujer de América Latina y el Caribe (1977–2022) · genealogía de la Agenda Regional de Género de la CEPAL.</div>
+      <div class="card-eras">
+        <span class="era-chip chip-conferencias">I · Decenio ONU</span>
+        <span class="era-chip chip-conferencias">II · Post-Beijing</span>
+        <span class="era-chip chip-conferencias">III · Agenda Regional</span>
+        <span class="era-chip chip-conferencias">IV · Agenda 2030</span>
+      </div>
+      <a class="card-cta cta-conferencias" href="file:///Users/andrea/Downloads/linea_tiempo_conferencias_regionales.html">Ver línea de tiempo</a>
+    </div>
+  </div>
+
+</div>
+
+<!-- BANNER MÉXICO -->
+<div class="mexico-banner">
+  <div class="mexico-inner">
+    <div class="mexico-icon">🇲🇽</div>
+    <div class="mexico-text">
+      <h3>Versiones México en desarrollo</h3>
+      <p>Las líneas de tiempo actuales están adaptadas al marco legislativo e institucional chileno (BCN, SNRSJ, SERNAM, Ministerio de la Mujer). Las versiones para México incorporarán el marco del SNDIF, la Ley General de Acceso de las Mujeres a una Vida Libre de Violencia, la SCJN, y los hitos del movimiento feminista mexicano. Disponibles próximamente en <a href="https://antisexismo.mx/" target="_blank" rel="noopener" style="color:var(--terra);">antisexismo.mx</a></p>
+    </div>
+  </div>
+</div>
+
+<!-- SOBRE LA SERIE -->
+<div class="sobre-section">
+  <div class="sobre-block">
+    <h3>Uso y licencia</h3>
+    <p>Todos los recursos de esta serie se distribuyen bajo licencia <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.es" target="_blank" rel="noopener">Creative Commons BY-NC-SA 4.0</a>. Puedes compartirlos y adaptarlos con atribución, sin fines comerciales y bajo la misma licencia.</p>
+    <br>
+    <p>Elaborados con fines educativos por el <a href="https://antisexismo.mx/" target="_blank" rel="noopener">Laboratorio de Antisexismo</a> y la <a href="https://catedraunescogeneroliderazgoyequidad.org/" target="_blank" rel="noopener">Cátedra UNESCO en Género, Liderazgo y Equidad (CUGLE)</a>.</p>
+  </div>
+
+  <div class="sobre-block">
+    <h3>Autoría y contacto</h3>
+    <p><strong>Dra. Andrea de la Barrera Montppellier</strong><br>
+    Fundadora del Laboratorio de Antisexismo · Directora del Programa de Política Educativa Antisexista, CUGLE · Universidad de Guadalajara</p>
+    <br>
+    <ul>
+      <li><a href="https://antisexismo.mx/" target="_blank" rel="noopener">antisexismo.mx</a></li>
+      <li><a href="https://www.andreadlbm.work/" target="_blank" rel="noopener">andreadlbm.work</a></li>
+      <li><a href="mailto:andrea@antisexismo.mx">andrea@antisexismo.mx</a></li>
+    </ul>
+    <br>
+    <p style="color:#888;font-size:12px;">Edición y código: Claude Sonnet 4.6 (Anthropic).</p>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="cc-badge">©</div>
+  <div>
+    <strong style="color:rgba(255,255,255,0.8);">Antisexismo Lab</strong> · <a href="https://antisexismo.mx/" target="_blank" rel="noopener">antisexismo.mx</a><br>
+    Recursos Educativos Abiertos · Serie Líneas de Tiempo · Derecho, género y justicia en América Latina<br>
+    Licencia <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.es" target="_blank" rel="noopener">CC BY-NC-SA 4.0</a> · Asistencia editorial y de código: Claude Sonnet 4.6 (Anthropic)
+  </div>
+</footer>
+
+
+
+</body></html>
