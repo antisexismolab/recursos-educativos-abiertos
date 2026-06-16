@@ -1,0 +1,815 @@
+
+<!DOCTYPE html>
+<!-- saved from url=(0083)file:///Users/andrea/Downloads/linea_tiempo_conferencias_regionales.html#era-agenda -->
+<html lang="es"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>La voz de las mujeres en la región · Línea de tiempo · Antisexismo Lab</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;600;700&family=Lora:ital,wght@0,400;0,600;1,400&display=swap');
+
+  :root {
+    --ink: #1a3028;
+    --paper: #e8f5f0;
+    --green-dark: #1a4a35;
+    --green-mid: #2d7a5a;
+    --green-light: #c8eadc;
+    --green-accent: #3a9e72;
+    --mid: #3a5a48;
+    --rule: #a8d4b8;
+    --white: #f4fcf8;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'Space Grotesk', sans-serif;
+    background: var(--paper);
+    color: var(--ink);
+    min-height: 100vh;
+  }
+
+  a { color: inherit; }
+  a:hover { opacity: 0.75; }
+
+  header {
+    background: var(--green-dark);
+    color: var(--paper);
+    padding: 48px 40px 40px;
+  }
+
+  .eyebrow {
+    font-size: 11px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--green-light);
+    margin-bottom: 14px;
+  }
+
+  header h1 {
+    font-family: 'Lora', serif;
+    font-size: clamp(26px, 4vw, 42px);
+    font-weight: 700;
+    line-height: 1.2;
+    max-width: 700px;
+  }
+
+  header h1 em {
+    font-style: italic;
+    color: #8dd4b0;
+  }
+
+  header p {
+    margin-top: 16px;
+    font-size: 14px;
+    color: rgba(232,245,240,0.7);
+    max-width: 620px;
+    line-height: 1.6;
+  }
+
+  .paradigm-bar {
+    display: flex;
+    max-width: 960px;
+    margin: 36px auto 0;
+    padding: 0 40px;
+    gap: 0;
+    flex-wrap: wrap;
+  }
+
+  .paradigm-pill {
+    flex: 1;
+    padding: 12px 16px;
+    font-size: 11px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    font-weight: 600;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    transition: opacity 0.15s;
+    min-width: 120px;
+  }
+
+  .paradigm-pill:hover { opacity: 0.85; }
+
+  .p-decenio { background: #0d3d28; color: var(--paper); }
+  .p-beijing { background: #1a5a3a; color: var(--paper); }
+  .p-agenda { background: var(--green-mid); color: #fff; }
+  .p-hoy { background: var(--green-accent); color: #fff; }
+
+  .container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 40px;
+  }
+
+  /* ── INTRO ── */
+  .agenda-intro {
+    max-width: 960px;
+    margin: 48px auto 0;
+    padding: 0 40px;
+  }
+
+  .agenda-intro h2 {
+    font-family: 'Lora', serif;
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--green-dark);
+    margin-bottom: 8px;
+  }
+
+  .agenda-intro p {
+    font-size: 13px;
+    color: var(--mid);
+    line-height: 1.7;
+    max-width: 680px;
+    margin-bottom: 20px;
+  }
+
+  .agenda-acuerdos {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 12px;
+    margin-top: 16px;
+  }
+
+  .acuerdo-chip {
+    background: var(--white);
+    border: 1px solid var(--rule);
+    border-radius: 4px;
+    padding: 10px 14px;
+    font-size: 12px;
+    line-height: 1.5;
+    color: var(--green-dark);
+  }
+
+  .acuerdo-chip strong {
+    display: block;
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+    color: var(--green-mid);
+  }
+
+  /* ── TIMELINE ── */
+  .timeline {
+    position: relative;
+    margin-top: 56px;
+  }
+
+  .timeline::before {
+    content: '';
+    position: absolute;
+    left: 160px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: var(--rule);
+  }
+
+  .era-label {
+    font-size: 10px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    font-weight: 700;
+    padding: 28px 0 10px 180px;
+    color: var(--mid);
+    border-bottom: 1px solid var(--rule);
+    margin-bottom: 0;
+  }
+
+  .era-decenio { color: #0d3d28; border-color: #0d3d28; }
+  .era-beijing { color: #1a5a3a; border-color: #1a5a3a; }
+  .era-agenda { color: var(--green-mid); border-color: var(--green-mid); }
+  .era-hoy { color: var(--green-accent); border-color: var(--green-accent); }
+
+  .event {
+    display: flex;
+    gap: 0;
+    align-items: flex-start;
+    position: relative;
+    padding: 24px 0;
+    border-bottom: 1px dashed var(--rule);
+  }
+
+  .event-date {
+    width: 160px;
+    flex-shrink: 0;
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--mid);
+    padding-right: 24px;
+    padding-top: 2px;
+    text-align: right;
+    line-height: 1.4;
+  }
+
+  .event-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    flex-shrink: 0;
+    margin-top: 4px;
+    position: relative;
+    left: -5px;
+  }
+
+  .dot-dark { background: #0d3d28; }
+  .dot-mid { background: var(--green-mid); }
+  .dot-accent { background: var(--green-accent); }
+  .dot-hito {
+    background: var(--ink);
+    width: 14px;
+    height: 14px;
+    left: -6px;
+    margin-top: 3px;
+  }
+
+  .event-content {
+    flex: 1;
+    padding-left: 20px;
+  }
+
+  .event-tag {
+    display: inline-block;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 3px 8px;
+    border-radius: 3px;
+    margin-bottom: 8px;
+  }
+
+  .tag-conf { background: var(--green-light); color: var(--green-dark); }
+  .tag-hito { background: var(--green-dark); color: #fff; }
+  .tag-cepal { background: var(--white); color: var(--green-mid); border: 1px solid var(--rule); }
+
+  .event-title {
+    font-family: 'Lora', serif;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 1.35;
+    margin-bottom: 8px;
+  }
+
+  .event-title a {
+    text-decoration: none;
+    border-bottom: 1px solid var(--rule);
+    transition: border-color 0.2s;
+  }
+
+  .event-title a:hover { border-color: var(--green-mid); }
+
+  .event-body {
+    font-size: 13px;
+    line-height: 1.65;
+    color: var(--mid);
+  }
+
+  .acuerdo-key {
+    background: var(--white);
+    border-left: 3px solid var(--green-mid);
+    padding: 10px 14px;
+    margin-top: 12px;
+    font-size: 12.5px;
+    line-height: 1.6;
+    border-radius: 0 4px 4px 0;
+    color: var(--ink);
+  }
+
+  .acuerdo-key strong {
+    display: block;
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--green-mid);
+    margin-bottom: 4px;
+  }
+
+  .source-link {
+    display: inline-block;
+    font-size: 11px;
+    color: var(--green-dark);
+    border-bottom: 1px solid var(--rule);
+    margin-top: 10px;
+    text-decoration: none;
+  }
+
+  .source-link::before { content: '↗ '; font-size: 10px; }
+  .source-link:hover { border-color: var(--green-mid); }
+
+  /* ── PANEL RECURSOS ── */
+  .agenda-panel {
+    background: var(--green-dark);
+    color: var(--paper);
+    margin-top: 56px;
+    padding: 48px 40px;
+  }
+
+  .agenda-panel h2 {
+    font-family: 'Lora', serif;
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 8px;
+  }
+
+  .agenda-panel p {
+    font-size: 13px;
+    color: rgba(232,245,240,0.6);
+    margin-bottom: 28px;
+    max-width: 600px;
+    line-height: 1.6;
+  }
+
+  .agenda-links {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 14px;
+    max-width: 880px;
+  }
+
+  .agenda-link-card {
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.15);
+    border-radius: 6px;
+    padding: 18px;
+    text-decoration: none;
+    color: #fff;
+    transition: background 0.2s;
+    display: block;
+  }
+
+  .agenda-link-card:hover {
+    background: rgba(255,255,255,0.14);
+    opacity: 1;
+  }
+
+  .alink-org {
+    font-size: 10px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #8dd4b0;
+    margin-bottom: 5px;
+    font-weight: 700;
+  }
+
+  .alink-title {
+    font-family: 'Lora', serif;
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 1.4;
+  }
+
+  /* ── FUENTES ── */
+  .sources-section {
+    max-width: 960px;
+    margin: 48px auto;
+    padding: 0 40px 48px;
+  }
+
+  .sources-section h2 {
+    font-size: 13px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: var(--mid);
+    border-bottom: 1px solid var(--rule);
+    padding-bottom: 10px;
+    margin-bottom: 24px;
+  }
+
+  .sources-group { margin-bottom: 24px; }
+
+  .sources-group h3 {
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: var(--green-dark);
+    margin-bottom: 10px;
+  }
+
+  .sources-group ul {
+    list-style: none;
+    font-size: 13px;
+    line-height: 1.7;
+    color: var(--mid);
+  }
+
+  .sources-group ul li { margin-bottom: 5px; }
+  .sources-group ul li a {
+    color: var(--green-dark);
+    border-bottom: 1px solid var(--rule);
+    text-decoration: none;
+  }
+
+  /* ── NAV SERIE ── */
+  .serie-nav {
+    background: var(--green-light);
+    border-top: 2px solid var(--green-mid);
+    padding: 20px 40px;
+    font-size: 12px;
+    color: var(--mid);
+  }
+
+  .serie-nav strong {
+    font-size: 10px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--green-dark);
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  .serie-links {
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+  }
+
+  .serie-link {
+    text-decoration: none;
+    color: var(--green-dark);
+    border-bottom: 1px solid var(--rule);
+    font-size: 13px;
+  }
+
+  .serie-link.active {
+    color: var(--ink);
+    font-weight: 600;
+    border-bottom-color: var(--ink);
+  }
+
+  /* ── FOOTER ── */
+  .cc-footer {
+    background: #1a1a1a;
+    color: #aaa;
+    padding: 32px 40px;
+    font-size: 12.5px;
+    line-height: 1.7;
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+  }
+
+  .cc-badge {
+    font-size: 28px;
+    flex-shrink: 0;
+    color: #666;
+    line-height: 1;
+    margin-top: 2px;
+  }
+
+  .cc-footer a { color: #8dd4b0; }
+
+  @media (max-width: 640px) {
+    header { padding: 32px 20px; }
+    .container, .agenda-intro, .sources-section { padding: 0 20px; }
+    .agenda-panel, .serie-nav, .cc-footer { padding: 24px 20px; }
+    .cc-footer { flex-direction: column; }
+    .timeline::before { left: 80px; }
+    .event-date { width: 80px; font-size: 11px; }
+    .era-label { padding-left: 100px; }
+    .paradigm-bar { gap: 2px; }
+    .paradigm-pill { min-width: 90px; font-size: 10px; padding: 10px; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div style="max-width:960px;margin:0 auto;">
+    <p class="eyebrow">Antisexismo Lab · Serie Recursos Educativos Abiertos</p>
+    <h1>La voz de las mujeres en la región:<br><em>Conferencias Regionales sobre la Mujer de América Latina y el Caribe (1977–2022)</em></h1>
+    <p>Genealogía de los acuerdos regionales que construyeron la Agenda Regional de Género de la CEPAL · quince conferencias, cuatro décadas de negociación política feminista, un marco acumulativo de compromisos de los Estados de ALC.</p>
+  </div>
+  <div class="paradigm-bar">
+    <a href="file:///Users/andrea/Downloads/linea_tiempo_conferencias_regionales.html#era-decenio" class="paradigm-pill p-decenio">I · Decenio ONU (1977–1988)</a>
+    <a href="file:///Users/andrea/Downloads/linea_tiempo_conferencias_regionales.html#era-beijing" class="paradigm-pill p-beijing">II · Post-Beijing (1991–2004)</a>
+    <a href="file:///Users/andrea/Downloads/linea_tiempo_conferencias_regionales.html#era-agenda" class="paradigm-pill p-agenda">III · Agenda Regional (2007–2016)</a>
+    <a href="file:///Users/andrea/Downloads/linea_tiempo_conferencias_regionales.html#era-hoy" class="paradigm-pill p-hoy">IV · Desarrollo sostenible (2019–2022)</a>
+  </div>
+</header>
+
+<!-- INTRO -->
+<div class="agenda-intro">
+  <h2>¿Qué es la Conferencia Regional sobre la Mujer de ALC?</h2>
+  <p>Es el principal foro intergubernamental de América Latina y el Caribe sobre los derechos de las mujeres e igualdad de género. Convocada por la CEPAL desde 1977, reúne a los gobiernos de la región para adoptar acuerdos que se incorporan a la <strong>Agenda Regional de Género</strong> — el marco acumulativo de compromisos políticos más comprehensivo de la región en la materia. Sus resoluciones no son vinculantes en sentido jurídico estricto, pero constituyen el estándar político regional de referencia.</p>
+  <div class="agenda-acuerdos">
+    <div class="acuerdo-chip"><strong>15 conferencias</strong>La Habana (1977) a Buenos Aires (2022)</div>
+    <div class="acuerdo-chip"><strong>Órgano convocante</strong>CEPAL · Naciones Unidas</div>
+    <div class="acuerdo-chip"><strong>Seguimiento</strong>Observatorio de Igualdad de Género CEPAL</div>
+    <div class="acuerdo-chip"><strong>Marco articulador</strong>Agenda Regional de Género · Agenda 2030 · Beijing</div>
+  </div>
+</div>
+
+<!-- LÍNEA DE TIEMPO -->
+<div class="container">
+  <div class="timeline">
+
+    <div class="era-label era-decenio" id="era-decenio">I · Decenio de las Naciones Unidas para la Mujer (1977–1988)</div>
+
+    <div class="event">
+      <div class="event-date">1977 · La Habana · Cuba</div>
+      <div class="event-dot dot-dark"></div>
+      <div class="event-content">
+        <span class="event-tag tag-conf">1ª Conferencia Regional</span>
+        <div class="event-title"><a href="https://repositorio.cepal.org/handle/11362/16736" target="_blank" rel="noopener">I Conferencia Regional sobre la Integración de la Mujer en el Desarrollo Económico y Social de América Latina</a></div>
+        <div class="event-body">Primera reunión regional específica sobre mujeres, convocada en el marco del Decenio de las Naciones Unidas para la Mujer. Adopta el <strong>Plan de Acción Regional</strong> — primera hoja de ruta regional para la integración de las mujeres al desarrollo. El foco es principalmente económico: empleo, educación, participación productiva. El marco conceptual es todavía el de la "integración" (WID) más que el de los derechos.
+          <div class="acuerdo-key"><strong>Acuerdo clave</strong>Plan de Acción Regional para la Integración de la Mujer en el Desarrollo Económico y Social de América Latina.</div>
+          <a class="source-link" href="https://repositorio.cepal.org/handle/11362/16736" target="_blank" rel="noopener">Repositorio CEPAL</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="event">
+      <div class="event-date">1979 · Macchu Picchu · Perú</div>
+      <div class="event-dot dot-dark"></div>
+      <div class="event-content">
+        <span class="event-tag tag-conf">2ª Conferencia Regional</span>
+        <div class="event-title">II Conferencia Regional · Evaluación y perspectivas del Plan de Acción</div>
+        <div class="event-body">Primera evaluación del Plan de Acción de La Habana. Identifica obstáculos estructurales para la participación económica de las mujeres y amplía el marco hacia la salud y la participación política. Coincide con la adopción de la CEDAW por la ONU (1979).</div>
+      </div>
+    </div>
+
+    <div class="event">
+      <div class="event-date">1983 · México DF · México</div>
+      <div class="event-dot dot-dark"></div>
+      <div class="event-content">
+        <span class="event-tag tag-conf">3ª Conferencia Regional</span>
+        <div class="event-title">III Conferencia Regional · Mujeres en el desarrollo regional</div>
+        <div class="event-body">Se celebra en el contexto de la crisis de la deuda latinoamericana. Analiza el impacto diferenciado de los ajustes estructurales sobre las mujeres — primer momento en que la conferencia vincula políticas macroeconómicas con desigualdad de género. Introduce la dimensión del trabajo reproductivo no remunerado.
+          <div class="acuerdo-key"><strong>Acuerdo clave</strong>Reconocimiento del impacto de la crisis económica y las políticas de ajuste estructural sobre las mujeres de la región.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="event">
+      <div class="event-date">1988 · Guatemala · Guatemala</div>
+      <div class="event-dot dot-dark"></div>
+      <div class="event-content">
+        <span class="event-tag tag-conf">4ª Conferencia Regional</span>
+        <div class="event-title">IV Conferencia Regional · Ante la Conferencia Mundial de Nairobi</div>
+        <div class="event-body">Preparatoria de la III Conferencia Mundial sobre la Mujer (Nairobi, 1985). Consolida el posicionamiento de ALC en el sistema ONU y amplía el marco hacia la violencia contra las mujeres como tema regional explícito por primera vez.</div>
+      </div>
+    </div>
+
+    <div class="era-label era-beijing" id="era-beijing">II · Emergencia del paradigma de derechos (1991–2004)</div>
+
+    <div class="event">
+      <div class="event-date">1991 · Curaçao · Antillas Neerlandesas</div>
+      <div class="event-dot dot-mid"></div>
+      <div class="event-content">
+        <span class="event-tag tag-conf">5ª Conferencia Regional</span>
+        <div class="event-title">V Conferencia Regional · Mujeres en el desarrollo sostenible</div>
+        <div class="event-body">Primera conferencia en el período post-transición democrática de gran parte de la región. Incorpora el marco del desarrollo sostenible y vincula igualdad de género con medio ambiente. También discute la violencia doméstica en preparación de Belém do Pará (1994).</div>
+      </div>
+    </div>
+
+    <div class="event">
+      <div class="event-date">1994 · Mar del Plata · Argentina</div>
+      <div class="event-dot dot-mid"></div>
+      <div class="event-content">
+        <span class="event-tag tag-conf">6ª Conferencia Regional</span>
+        <div class="event-title">VI Conferencia Regional · Ante la IV Conferencia Mundial · Beijing</div>
+        <div class="event-body">Preparatoria de Beijing (1995). Define la posición de ALC en la negociación de la Plataforma de Acción de Beijing. Mar del Plata es el momento en que ALC se posiciona como bloque progresista en el sistema ONU en materia de género.
+          <div class="acuerdo-key"><strong>Acuerdo clave</strong>Posición regional consolidada para Beijing 1995, incluyendo derechos sexuales y reproductivos como derechos humanos.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="event">
+      <div class="event-date">1997 · Santiago · Chile</div>
+      <div class="event-dot dot-mid"></div>
+      <div class="event-content">
+        <span class="event-tag tag-conf">7ª Conferencia Regional</span>
+        <div class="event-title"><a href="https://repositorio.cepal.org/handle/11362/16704" target="_blank" rel="noopener">VII Conferencia Regional · Santiago · Programa de Acción Regional</a></div>
+        <div class="event-body">Adopta el <strong>Programa de Acción Regional para las Mujeres de América Latina y el Caribe 1995–2001</strong>. Primera vez que la conferencia adopta un marco de seguimiento regional con indicadores.
+          <div class="acuerdo-key"><strong>Acuerdo clave</strong>Programa de Acción Regional 1995–2001 · primer marco de seguimiento con indicadores para la región.</div>
+          <a class="source-link" href="https://repositorio.cepal.org/handle/11362/16704" target="_blank" rel="noopener">Repositorio CEPAL</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="event">
+      <div class="event-date">2000 · Lima · Perú</div>
+      <div class="event-dot dot-mid"></div>
+      <div class="event-content">
+        <span class="event-tag tag-conf">8ª Conferencia Regional</span>
+        <div class="event-title"><a href="https://repositorio.cepal.org/handle/11362/16707" target="_blank" rel="noopener">VIII Conferencia Regional · Lima · Consenso de Lima</a></div>
+        <div class="event-body">Adopta el <strong>Consenso de Lima</strong> — primera vez que los acuerdos toman la forma de un consenso político formal. Refuerza los derechos económicos de las mujeres, el trabajo no remunerado y la participación política.
+          <div class="acuerdo-key"><strong>Acuerdo clave</strong>Consenso de Lima · reconocimiento del trabajo no remunerado y demanda de su medición en las cuentas nacionales.</div>
+          <a class="source-link" href="https://repositorio.cepal.org/handle/11362/16707" target="_blank" rel="noopener">Consenso de Lima · CEPAL</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="event">
+      <div class="event-date">2004 · México DF · México</div>
+      <div class="event-dot dot-mid"></div>
+      <div class="event-content">
+        <span class="event-tag tag-conf">9ª Conferencia Regional</span>
+        <div class="event-title"><a href="https://repositorio.cepal.org/handle/11362/16710" target="_blank" rel="noopener">IX Conferencia Regional · México · Consenso de México</a></div>
+        <div class="event-body">Adopta el <strong>Consenso de México</strong>. Eje central: la <strong>paridad política</strong> como condición de la democracia. Introduce el concepto de democracia paritaria como estándar regional.
+          <div class="acuerdo-key"><strong>Acuerdo clave</strong>Consenso de México · democracia paritaria como estándar regional · paridad en la toma de decisiones políticas.</div>
+          <a class="source-link" href="https://repositorio.cepal.org/handle/11362/16710" target="_blank" rel="noopener">Consenso de México · CEPAL</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="era-label era-agenda" id="era-agenda">III · Construcción de la Agenda Regional de Género (2007–2016)</div>
+
+    <div class="event">
+      <div class="event-date">2007 · Quito · Ecuador</div>
+      <div class="event-dot dot-hito"></div>
+      <div class="event-content">
+        <span class="event-tag tag-hito">Hito · Autonomía</span>
+        <div class="event-title"><a href="https://repositorio.cepal.org/handle/11362/16631" target="_blank" rel="noopener">X Conferencia Regional · Quito · Consenso de Quito</a></div>
+        <div class="event-body">Adopta el <strong>Consenso de Quito</strong> — uno de los más influyentes de la serie. Introduce el marco de las <strong>tres autonomías de las mujeres</strong> que luego estructurará el diagrama de la Agenda Regional de Género: autonomía económica, autonomía física y autonomía en la toma de decisiones. Reconoce explícitamente el trabajo de cuidado no remunerado como trabajo y como condición de posibilidad de la igualdad.
+          <div class="acuerdo-key"><strong>Acuerdo clave</strong>Marco de las tres autonomías · reconocimiento del trabajo de cuidado · responsabilidad compartida del Estado, el mercado, la comunidad y las familias en la organización social del cuidado.</div>
+          <a class="source-link" href="https://repositorio.cepal.org/handle/11362/16631" target="_blank" rel="noopener">Consenso de Quito · CEPAL</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="event">
+      <div class="event-date">2010 · Brasilia · Brasil</div>
+      <div class="event-dot dot-hito"></div>
+      <div class="event-content">
+        <span class="event-tag tag-hito">Hito · Cuidado</span>
+        <div class="event-title"><a href="https://repositorio.cepal.org/handle/11362/16680" target="_blank" rel="noopener">XI Conferencia Regional · Brasilia · Consenso de Brasilia</a></div>
+        <div class="event-body">Adopta el <strong>Consenso de Brasilia</strong>. Profundiza el marco del cuidado: demanda políticas públicas de cuidado como responsabilidad del Estado y los empleadores, no solo de las familias. Introduce la dimensión de la <strong>economía del cuidado</strong> como eje de política.
+          <div class="acuerdo-key"><strong>Acuerdo clave</strong>Consenso de Brasilia · economía del cuidado como responsabilidad pública · derechos de las mujeres rurales, afrodescendientes e indígenas.</div>
+          <a class="source-link" href="https://repositorio.cepal.org/handle/11362/16680" target="_blank" rel="noopener">Consenso de Brasilia · CEPAL</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="event">
+      <div class="event-date">2013 · Santo Domingo · República Dominicana</div>
+      <div class="event-dot dot-hito"></div>
+      <div class="event-content">
+        <span class="event-tag tag-hito">Hito · Economía digital</span>
+        <div class="event-title"><a href="https://repositorio.cepal.org/handle/11362/16561" target="_blank" rel="noopener">XII Conferencia Regional · Santo Domingo · Consenso de Santo Domingo</a></div>
+        <div class="event-body">Adopta el <strong>Consenso de Santo Domingo</strong>. Primera conferencia que incorpora la <strong>brecha digital de género</strong> como eje específico: acceso de las mujeres a las TIC como condición de autonomía económica.
+          <div class="acuerdo-key"><strong>Acuerdo clave</strong>Consenso de Santo Domingo · brecha digital de género · acceso a TIC como derecho · paridad como objetivo en todos los ámbitos.</div>
+          <a class="source-link" href="https://repositorio.cepal.org/handle/11362/16561" target="_blank" rel="noopener">Consenso de Santo Domingo · CEPAL</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="event">
+      <div class="event-date">2016 · Montevideo · Uruguay</div>
+      <div class="event-dot dot-hito"></div>
+      <div class="event-content">
+        <span class="event-tag tag-hito">Hito · Estrategia regional</span>
+        <div class="event-title"><a href="https://repositorio.cepal.org/handle/11362/40715" target="_blank" rel="noopener">XIII Conferencia Regional · Montevideo · Estrategia de Montevideo</a></div>
+        <div class="event-body">Adopta la <strong>Estrategia de Montevideo</strong> — el instrumento más comprehensivo de la serie. Articula la Agenda Regional de Género con la Agenda 2030, identifica los cuatro <strong>nudos estructurales</strong> de la desigualdad y define 10 ejes de implementación para los Estados.
+          <div class="acuerdo-key"><strong>Acuerdo clave</strong>Estrategia de Montevideo · nudos estructurales de la desigualdad · articulación con ODS · 10 ejes de implementación: marcos normativos, institucionalidad, participación política, capacidad del Estado, financiamiento, comunicación, tecnología, cooperación, sistemas de información y monitoreo.</div>
+          <a class="source-link" href="https://repositorio.cepal.org/handle/11362/40715" target="_blank" rel="noopener">Estrategia de Montevideo · CEPAL</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="era-label era-hoy" id="era-hoy">IV · Agenda 2030 y sostenibilidad (2019–2022)</div>
+
+    <div class="event">
+      <div class="event-date">2019 · Santiago · Chile</div>
+      <div class="event-dot dot-accent"></div>
+      <div class="event-content">
+        <span class="event-tag tag-cepal">CEPAL · Sociedad del cuidado</span>
+        <div class="event-title"><a href="https://repositorio.cepal.org/handle/11362/44666" target="_blank" rel="noopener">XIV Conferencia Regional · Santiago · Compromiso de Santiago</a></div>
+        <div class="event-body">Adopta el <strong>Compromiso de Santiago</strong>. Eje central: la <strong>sociedad del cuidado</strong> como horizonte político — un modelo de organización social donde el cuidado es responsabilidad colectiva y condición de la igualdad. Se adopta en el contexto del estallido social chileno (octubre 2019).
+          <div class="acuerdo-key"><strong>Acuerdo clave</strong>Compromiso de Santiago · sociedad del cuidado como proyecto político regional · sostenibilidad de la vida como eje articulador · sistemas de cuidado como política pública universal.</div>
+          <a class="source-link" href="https://repositorio.cepal.org/handle/11362/44666" target="_blank" rel="noopener">Compromiso de Santiago · CEPAL</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="event">
+      <div class="event-date">2022 · Buenos Aires · Argentina</div>
+      <div class="event-dot dot-accent"></div>
+      <div class="event-content">
+        <span class="event-tag tag-cepal">CEPAL · Post-pandemia</span>
+        <div class="event-title"><a href="https://repositorio.cepal.org/handle/11362/47950" target="_blank" rel="noopener">XV Conferencia Regional · Buenos Aires · Compromiso de Buenos Aires</a></div>
+        <div class="event-body">Adopta el <strong>Compromiso de Buenos Aires</strong>. Se celebra en el contexto de la recuperación post-pandemia del COVID-19, que evidenció y profundizó las desigualdades de género en el trabajo de cuidado, el empleo y la violencia.
+          <div class="acuerdo-key"><strong>Acuerdo clave</strong>Compromiso de Buenos Aires · recuperación post-pandemia con igualdad de género · economía del cuidado como pilar de la recuperación · finanzas públicas con perspectiva de género.</div>
+          <a class="source-link" href="https://repositorio.cepal.org/handle/11362/47950" target="_blank" rel="noopener">Compromiso de Buenos Aires · CEPAL</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="event">
+      <div class="event-date">Hoy · ALC</div>
+      <div class="event-dot dot-accent"></div>
+      <div class="event-content">
+        <span class="event-tag tag-cepal">Horizonte</span>
+        <div class="event-title">La Agenda Regional de Género como marco acumulativo</div>
+        <div class="event-body">Los quince consensos y compromisos adoptados entre 1977 y 2022 no son documentos aislados: son capas de un mismo edificio político. La <strong>Agenda Regional de Género</strong> es el estándar regional de referencia para la evaluación de las políticas de igualdad de género en ALC. Su seguimiento corresponde al <strong>Observatorio de Igualdad de Género de la CEPAL</strong>.
+          <div class="acuerdo-key"><strong>Para la práctica</strong>Cualquier política pública, programa de capacitación o intervención institucional que invoque la igualdad de género en ALC debería poder situarse en relación con esta agenda acumulativa: ¿qué compromisos retoma? ¿Cuáles ignora? ¿Qué nudos estructurales aborda y cuáles deja intactos?</div>
+          <a class="source-link" href="https://www.cepal.org/es/publicaciones/81441-la-agenda-2030-desarrollo-sostenible-la-agenda-regional-genero-america-latina" target="_blank" rel="noopener">Agenda Regional de Género · CEPAL</a>
+          &nbsp;&nbsp;
+          <a class="source-link" href="https://oig.cepal.org/es" target="_blank" rel="noopener">Observatorio de Igualdad de Género · CEPAL</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- PANEL RECURSOS -->
+<div class="agenda-panel">
+  <div style="max-width:960px;margin:0 auto;">
+    <h2>Documentos de referencia</h2>
+    <p>Acceso directo a los consensos y compromisos adoptados en cada conferencia y a los marcos institucionales de seguimiento.</p>
+    <div class="agenda-links">
+      <a class="agenda-link-card" href="https://www.cepal.org/es/publicaciones/81441-la-agenda-2030-desarrollo-sostenible-la-agenda-regional-genero-america-latina" target="_blank" rel="noopener">
+        <div class="alink-org">CEPAL</div>
+        <div class="alink-title">Agenda Regional de Género</div>
+      </a>
+      <a class="agenda-link-card" href="https://oig.cepal.org/es" target="_blank" rel="noopener">
+        <div class="alink-org">CEPAL</div>
+        <div class="alink-title">Observatorio de Igualdad de Género de ALC</div>
+      </a>
+      <a class="agenda-link-card" href="https://repositorio.cepal.org/handle/11362/40715" target="_blank" rel="noopener">
+        <div class="alink-org">CEPAL · 2016</div>
+        <div class="alink-title">Estrategia de Montevideo</div>
+      </a>
+      <a class="agenda-link-card" href="https://repositorio.cepal.org/handle/11362/44666" target="_blank" rel="noopener">
+        <div class="alink-org">CEPAL · 2019</div>
+        <div class="alink-title">Compromiso de Santiago</div>
+      </a>
+      <a class="agenda-link-card" href="https://repositorio.cepal.org/handle/11362/47950" target="_blank" rel="noopener">
+        <div class="alink-org">CEPAL · 2022</div>
+        <div class="alink-title">Compromiso de Buenos Aires</div>
+      </a>
+      <a class="agenda-link-card" href="https://www.oas.org/es/mesecvi/" target="_blank" rel="noopener">
+        <div class="alink-org">OEA</div>
+        <div class="alink-title">MESECVI · Seguimiento Belém do Pará</div>
+      </a>
+      <a class="agenda-link-card" href="https://www.oas.org/es/cim/" target="_blank" rel="noopener">
+        <div class="alink-org">OEA</div>
+        <div class="alink-title">CIM · Comisión Interamericana de Mujeres</div>
+      </a>
+      <a class="agenda-link-card" href="https://sdgs.un.org/es/goals/goal5" target="_blank" rel="noopener">
+        <div class="alink-org">ONU</div>
+        <div class="alink-title">Agenda 2030 · ODS 5: Igualdad de Género</div>
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- FUENTES -->
+<div class="sources-section">
+  <h2>Fuentes</h2>
+  <div class="sources-group">
+    <h3>Conferencias Regionales sobre la Mujer de ALC · CEPAL</h3>
+    <ul>
+      <li>I Conferencia (1977, La Habana). <a href="https://repositorio.cepal.org/handle/11362/16736" target="_blank" rel="noopener">Plan de Acción Regional · CEPAL</a></li>
+      <li>VII Conferencia (1997, Santiago). <a href="https://repositorio.cepal.org/handle/11362/16704" target="_blank" rel="noopener">Programa de Acción Regional 1995–2001 · CEPAL</a></li>
+      <li>VIII Conferencia (2000, Lima). <a href="https://repositorio.cepal.org/handle/11362/16707" target="_blank" rel="noopener">Consenso de Lima · CEPAL</a></li>
+      <li>IX Conferencia (2004, México). <a href="https://repositorio.cepal.org/handle/11362/16710" target="_blank" rel="noopener">Consenso de México · CEPAL</a></li>
+      <li>X Conferencia (2007, Quito). <a href="https://repositorio.cepal.org/handle/11362/16631" target="_blank" rel="noopener">Consenso de Quito · CEPAL</a></li>
+      <li>XI Conferencia (2010, Brasilia). <a href="https://repositorio.cepal.org/handle/11362/16680" target="_blank" rel="noopener">Consenso de Brasilia · CEPAL</a></li>
+      <li>XII Conferencia (2013, Santo Domingo). <a href="https://repositorio.cepal.org/handle/11362/16561" target="_blank" rel="noopener">Consenso de Santo Domingo · CEPAL</a></li>
+      <li>XIII Conferencia (2016, Montevideo). <a href="https://repositorio.cepal.org/handle/11362/40715" target="_blank" rel="noopener">Estrategia de Montevideo · CEPAL</a></li>
+      <li>XIV Conferencia (2019, Santiago). <a href="https://repositorio.cepal.org/handle/11362/44666" target="_blank" rel="noopener">Compromiso de Santiago · CEPAL</a></li>
+      <li>XV Conferencia (2022, Buenos Aires). <a href="https://repositorio.cepal.org/handle/11362/47950" target="_blank" rel="noopener">Compromiso de Buenos Aires · CEPAL</a></li>
+    </ul>
+  </div>
+  <div class="sources-group">
+    <h3>Marcos institucionales de referencia</h3>
+    <ul>
+      <li>CEPAL. <em>Agenda Regional de Género</em>. <a href="https://www.cepal.org/es/publicaciones/81441-la-agenda-2030-desarrollo-sostenible-la-agenda-regional-genero-america-latina" target="_blank" rel="noopener">cepal.org</a></li>
+      <li>CEPAL. <em>Observatorio de Igualdad de Género de ALC</em>. <a href="https://oig.cepal.org/es" target="_blank" rel="noopener">oig.cepal.org</a></li>
+      <li>OEA. <em>Comisión Interamericana de Mujeres (CIM)</em>. <a href="https://www.oas.org/es/cim/" target="_blank" rel="noopener">oas.org</a></li>
+    </ul>
+  </div>
+</div>
+
+<!-- NAV SERIE -->
+<div class="serie-nav">
+  <strong>Serie · Recursos Educativos Abiertos · Antisexismo Lab</strong>
+  <div class="serie-links">
+    <a class="serie-link" href="file:///Users/andrea/Downloads/index.html">← Portal de la serie</a>
+    <a class="serie-link" href="file:///Users/andrea/Downloads/linea_tiempo_reinsercion.html">Del castigo al cuidado · Justicia juvenil</a>
+    <a class="serie-link" href="file:///Users/andrea/Downloads/linea_tiempo_violencia_mujeres.html">De la moral al crimen de lesa humanidad</a>
+    <a class="serie-link active" href="file:///Users/andrea/Downloads/linea_tiempo_conferencias_regionales.html">La voz de las mujeres en la región</a>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<div class="cc-footer">
+  <div class="cc-badge">©</div>
+  <div class="cc-text">
+    <strong>Antisexismo Lab</strong> · <a href="https://antisexismo.mx/" target="_blank" rel="noopener">antisexismo.mx</a><br>
+    Esta línea de tiempo se distribuye bajo licencia <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.es" target="_blank" rel="noopener"><strong>Creative Commons Atribución-NoComercial-CompartirIgual 4.0 Internacional (CC BY-NC-SA 4.0)</strong></a>.<br><br>
+    Autoría: <strong>Dra. Andrea de la Barrera Montppellier</strong>, Fundadora del Laboratorio de Antisexismo y Directora del Programa de Política Educativa Antisexista, Cátedra UNESCO en Género, Liderazgo y Equidad (CUGLE) · Universidad de Guadalajara. Edición y código: Claude Sonnet 4.6 (Anthropic).
+  </div>
+</div>
+
+
+
+</body></html>
